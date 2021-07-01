@@ -1,0 +1,135 @@
+/* Search bar */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #55608f;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9dbfaf;
+}
+
+.searchTerm:focus {
+    color: #35302d;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #55608f;
+    background: #55608f;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wrap {
+    width: 80%;
+}
+
+
+/* END Search bar */
+
+.main {
+    margin-left: 15%;
+    margin-top: 1vw;
+}
+
+.sub_main {
+    display: flex;
+    width: 50%;
+    margin-left: 50%;
+}
+
+.sub_main div {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.container-table {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* table style */
+
+.table-table {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+    flex-grow: 1;
+    text-align: center;
+}
+
+.th-table,
+.td-table {
+    padding: 1% 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 14.28571428571429%;
+}
+
+.thead-table .th-table {
+    background-color: #55608f;
+}
+
+.tbody-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tr-table:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tr-table:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.fa-edit,
+.fa-trash-alt,
+.fa-print {
+    font-size: 25px;
+    font-size: 21px;
+    color: white;
+    font-weight: 100;
+}
+
+.td-table input:focus {
+    outline: 0;
+}
+
+.fa-times-circle {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+    transition: display 1s ease;
+    padding: 0;
+}
+
+.tr-table {
+    transition: display 1s ease;
+}
+
+input[type="number"] {
+    text-align: center;
+}
+
+
+/* END table style */
