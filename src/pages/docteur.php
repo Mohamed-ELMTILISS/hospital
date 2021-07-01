@@ -27,7 +27,7 @@
                 <div class="search__div">
                     <div class="wrap">
                         <div class="search">
-                            <input type="text" id="search" onkeyup="search()" class="searchTerm" placeholder="What are you looking for?">
+                            <input type="text" id="search" class="searchTerm" placeholder="What are you looking for?">
                             <button type="submit" class="searchButton">
                             <i class="fa fa-search"></i>
                         </button>
@@ -55,7 +55,7 @@
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
                                     echo '
-                                    <tr class="tr-table row_' . $row['cin_D'] . '">
+                                    <tr class="tr-table-main row_' . $row['cin_D'] . '">
                                         <td class="td-table cin_D">' . $row['cin_D'] . '</td>
                                         <td class="td-table nom">' . $row['nom'] . '</td>
                                         <td class="td-table prenom">' . $row['prenom'] . '</td>
@@ -95,26 +95,14 @@
             </div>
     </main>
     <script>
-        function search() {
-                var input, filter, table, tr, td, i, txtValue
-                input = document.getElementById("search")
-                filter = input.value.toUpperCase()
-                table = document.getElementById("table-table")
-                tr = table.getElementsByClassName("tr-table")
-                for (i = 0; i < tr.length; i++) {
-                    for (j = 0; j < 3; j++) {
-                        td = tr[i].getElementsByClassName("td-table")[j]
-                        if (td) {
-                            txtValue = td.textContent || td.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = ""
-                            } else {
-                                tr[i].style.display = "none"
-                            }
-                        }
-                    }
-                }
-            }
+        $(document).ready(function(){
+            $("#search").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".tr-table-main").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
 
             function add_new() {
                 var add = document.createElement("TR")
