@@ -34,7 +34,7 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-
+    header("Location:rendez_vous.php");
 
 
 

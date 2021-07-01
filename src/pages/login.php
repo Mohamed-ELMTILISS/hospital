@@ -12,6 +12,8 @@ if ($result->num_rows > 0) {
             if ($_POST['password'] == $row['password']) {
                 $_SESSION['username'] = $row['user_name'];
                 $_SESSION['cin_user'] = $row['cin_U'];
+                $_SESSION['Admin'] = $row['Admin'];
+                $_SESSION['password'] = $row['password'];
                 $login = true;
                 echo "<script>window.location.assign('index.php');</script>";
                 break;

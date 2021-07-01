@@ -126,18 +126,16 @@ section.container {
     font-size: 25px;
 }
 
-td.td-table input[type="text"] {
+td.td-table input[type="text"],
+td.td-table input[type="password"],
+td.td-table input[type="email"],
+td.td-table input[type="date"] {
     width: 100%;
     text-align: center;
 }
 
 td.td-table input[type="tel"] {
     width: 80%;
-}
-
-td.td-table input[type="date"] {
-    width: 100%;
-    text-align: center;
 }
 
 

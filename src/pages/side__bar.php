@@ -125,7 +125,7 @@
     }
     
     li.logout {
-        top: 46%;
+        top: 55%;
     }
     
     body {
@@ -171,8 +171,14 @@
                 <li><a href="Etat.php">Etat de patient</a></li>
                 <li><a href="facture.php">Facture</a></li>
                 <li><a href="rendez_vous.php">Rendez vous</a></li>
-                <li><a href="docteur.php">Docteur</a></li>
-                <li class="logout"><a href="logout.php">Logout</a></li>
+                <?php 
+                    if ($_SESSION['Admin'] == 1) {
+                        echo '<li><a href="docteur.php">Docteur</a></li>';
+                        echo '<li><a href="utilisateur.php">Utilisateur</a></li>';
+                    }
+                ?>
+                
+                <li class="logout" <?php if ($_SESSION['Admin'] == 1){ echo 'style="top:37%;"';}?> ><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
     </div>

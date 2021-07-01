@@ -13,7 +13,7 @@
             echo '<script>alert("please login");';
             echo 'window.location.assign("../../index.php")</script>';
         }
-        include_once 'side__bar.html';
+        include_once 'side__bar.php';
         ?>
 
         <main class="main">
