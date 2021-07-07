@@ -14,12 +14,13 @@
     <?php 
         session_start();
         if (!isset($_SESSION['username']) and !isset($_SESSION['cin_user'])) {
-            if ($_SESSION['Admin'] == 1) {
+            echo '<script>alert("please login ❗❗");';
+            echo 'window.location.assign("../../index.php")</script>';
+        }else {
+            if ($_SESSION['Admin'] == 0) {
                 echo '<script>alert("Your Are Not Admin 🔒");';
                 echo 'window.location.assign("index.php")</script>';
             }
-            echo '<script>alert("please login ❗❗");';
-            echo 'window.location.assign("../../index.php")</script>';
         }
         include_once 'side__bar.php';
     ?>
